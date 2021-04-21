@@ -13,22 +13,24 @@
         行到水穷处，坐看云起时。
     </div>
 
-    <a id="link" href="132">
+    <a id="link" href="index.html">
         <i class="fa fa-heart" aria-hidden="true"></i>
     </a>
 </body>
 
 <script>
     var url = window.location.href;
-    keys = url.split('.');
-    key = keys[keys.length-2];
-    if(key=='lixiaolin')
+    if(url.search("lixiaolin")!=-1)
     {
         $("#link").attr("href","https://zhuqiuying.icu");
     }
-    else
+    else if(url.search("lixiaolin")!=-1)
     {
         $("#link").attr("href","https://lixiaolin.icu");
+    }
+    else
+    {
+        $("#link").attr("href","index.html");
     }
     
 </script>
