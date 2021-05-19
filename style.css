@@ -4,15 +4,35 @@ html{
 #main{
     position: absolute;
     top: 45%;
-    left: 40%;
-    font-size: 30px;
+    left: 35%;
+    font-size: 40px;
     font-family:'fangsong';
     text-align: center;
 }
 
 #link{
     position: absolute;
+    font-size: 30px;
     color: black;
     bottom: 2%;
     left: 2%;
 }
+
+@media screen and (max-width: 1000px){
+    #main{
+        position: absolute;
+        top: 45%;
+        left: 10%;
+        font-size: 70px;
+        font-family:'fangsong';
+        text-align: center;
+    }
+
+    #link{
+        position: absolute;
+        font-size: 55px;
+        color: black;
+        bottom: 3%;
+        left: 3%;
+    }
+  }

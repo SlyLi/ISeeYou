@@ -13,25 +13,50 @@
         行到水穷处，坐看云起时。
     </div>
 
-    <a id="link" href="index.html">
+    <div id="link" href="index.html">
         <i class="fa fa-heart" aria-hidden="true"></i>
-    </a>
+    </div>
 </body>
 
 <script>
     var url = window.location.href;
+    var tar_url;
     if(url.search("lixiaolin")!=-1)
     {
-        $("#link").attr("href","https://zhuqiuying.icu");
+        tar_url = "https://zhuqiuying.icu";
     }
     else if(url.search("zhuqiuying")!=-1)
     {
-        $("#link").attr("href","https://lixiaolin.icu");
+        tar_url = "https://lixiaolin.icu";
     }
     else
     {
-        $("#link").attr("href","index.html");
+       tar_url = url;
     }
+
+    var timer = null;
+    var cnt =0;
+
+    $("#link").click(function(){
+            cnt++;
+            timer = setTimeout(function(){
+                switch (cnt) {
+                    case 1:
+                        console.log("舞低杨柳楼心月");        
+                        break;
+                    case 2:
+                        console.log("歌尽桃花扇底风");        
+                        break;
+                    case 3:
+                        window.location.href = tar_url;
+                        break;
+                    default:    
+                        break;
+                } 
+                clearTimeout(timer);         
+                cnt =0;                         
+        }, 500);});
+    
     
 </script>
 
